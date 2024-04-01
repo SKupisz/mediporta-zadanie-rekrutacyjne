@@ -14,22 +14,28 @@ import { DataGrid,
 } from "@fluentui/react-components";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { ErrorHeader } from "./Tags.styled";
+import { ErrorHeader } from "./TagsTable.styled";
 
 interface Item {
     name: string;
     count: number;
 }
 
-interface TagsProps {
+interface TagsTableProps {
+    /**
+     * Determines how much tags will be displayed per page
+     */
     pageSize: number;
+    /**
+     * The number of page currently loaded
+     */
     page: number;
 }
 
-export const Tags = ({
+export const TagsTable = ({
     pageSize,
     page
-}: TagsProps) => {
+}: TagsTableProps) => {
 
     const [tags, setTags] = useState<Item[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(false);

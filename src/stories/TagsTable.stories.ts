@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Tags } from './Tags';
+import { TagsTable } from './TagsTable';
 
 const meta = {
-  title: 'Mediporta/Tags',
-  component: Tags,
+  title: 'Mediporta/TagsTable',
+  component: TagsTable,
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
@@ -14,7 +14,7 @@ const meta = {
     pageSize: 40,
     page: 1,
   },
-} satisfies Meta<typeof Tags>;
+} satisfies Meta<typeof TagsTable>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
